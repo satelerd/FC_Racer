@@ -10,15 +10,14 @@ print("Pero no creas que te voy a regalar algo tan fácilmente. Tendrás que dem
 print("El desafío consiste en escribir sobre un tema que te apasione lo más rápido y sin errores posible. Sé que eres muy bueno en esto, así que no te lo pondré fácil.")
 print("Debes alcanzar una velocidad mínima de 50 wpm y cometer como máximo 3 errores para lograr tu objetivo.")
 print()
+
 # Establecer un umbral mínimo de velocidad y máximo de errores para superar el desafío
 velocidad_minima = 50 # wpm
 errores_maximos = 3
 
-# Crear una variable para controlar si el usuario ha superado el desafío o no
+# Crear un bucle while que se repita hasta que el usuario supere el desafío
 superado = False
 primero = True
-
-# Crear un bucle while que se repita hasta que el usuario supere el desafío
 while not superado:
     if not primero:
         input("Presiona ENTER para volver a intentarlo.")
@@ -26,8 +25,6 @@ while not superado:
         print()
         print()
     primero = False
-
-            # HAY QUE ARREGLAR EL TEXTO°
 
     # Crear el texto a escribir con palabras aleatorias de la lista
     lista = ["bitri", "blitzcrank", "super red del bitran", "bitri el tocino", "du hast", "ecuestre", "aviso!", "la rueda nunca deja de girar", "chachis gaming chile"]
