@@ -14,24 +14,39 @@ errores_maximos = 3
 
 # Crear una variable para controlar si el usuario ha superado el desafío o no
 superado = False
+primero = True
 
 # Crear un bucle while que se repita hasta que el usuario supere el desafío
 while not superado:
+    if not primero:
+        input("Presiona ENTER para volver a intentarlo.")
+        print()
+        print()
+        print()
+    primero = False
 
     # Crear el texto a escribir con palabras aleatorias de la lista
     lista = ["bitri", "blitzcrank", "super red del bitran", "bitri el tocino", "du hast", "ecuestre", "aviso!", "la rueda nunca deja de girar", "chachis gaming chile"]
     texto = ""
-    for i in range(5):
+    for i in range(len(lista)):
         palabra = random.choice(lista)
         texto += palabra + " "
-    print(f"El texto a escribir es: {texto}")
-
-    print("¿Estás listo? Presiona ENTER para comenzar o CTRL+C para salir.")
+    print(f"El texto a escribir es:")
+    print("-----------------------------------------------------------------")
+    print(texto)
+    print("-----------------------------------------------------------------")
+    print()
+    print("¿Estás listo? Presiona ENTER para comenzar (o CTRL+C para salir).")
     input()
 
     # Iniciar el cronómetro y pedir al usuario que escriba el texto
     tiempo_inicial = time.time()
-    texto_usuario = input("Escribe el texto aquí: ")
+    print("¡Empieza a escribir!")
+    print()
+    print("-----------------------------------------------------------------")
+    texto_usuario = input()
+    print("-----------------------------------------------------------------")
+    print()
     tiempo_final = time.time()
 
     # Cálculos de velocidad y errores
