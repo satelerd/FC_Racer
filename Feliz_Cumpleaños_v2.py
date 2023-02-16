@@ -9,7 +9,7 @@ print("El desafío consiste en escribir sobre un tema que te apasione lo más r�
 print("Debes alcanzar una velocidad mínima de 40 wpm y cometer como máximo 3 errores para lograr tu objetivo.")
 print()
 # Establecer un umbral mínimo de velocidad y máximo de errores para superar el desafío
-velocidad_minima = 40 # wpm
+velocidad_minima = 45 # wpm
 errores_maximos = 3
 
 # Crear una variable para controlar si el usuario ha superado el desafío o no
@@ -25,12 +25,16 @@ while not superado:
         print()
     primero = False
 
+            # HAY QUE ARREGLAR EL TEXTO°
+
     # Crear el texto a escribir con palabras aleatorias de la lista
     lista = ["bitri", "blitzcrank", "super red del bitran", "bitri el tocino", "du hast", "ecuestre", "aviso!", "la rueda nunca deja de girar", "chachis gaming chile"]
+    random.shuffle(lista)
+    print(lista)
     texto = ""
-    for i in range(len(lista)):
-        palabra = random.choice(lista)
-        texto += palabra + " "
+    for i in lista:
+        texto += i + " "
+
     print(f"El texto a escribir es:")
     print("-----------------------------------------------------------------")
     print(texto)
