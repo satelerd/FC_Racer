@@ -1,15 +1,17 @@
 # Feliz_Cumpleaños.py
 import time
 import random
+from termcolor import colored
 
-# Mensaje de bienvenida
-print("Hola Bitran. Te he enviado este archivo especial porque hoy es tu cumpleaños y quiero desearte lo    .")
+# Mensaje de bienvenida´
+print()
+print("Hola Bitran. Te he enviado este archivo especial porque hoy es tu cumpleaños y quiero desearte lo mejor")
 print("Pero no creas que te voy a regalar algo tan fácilmente. Tendrás que demostrar que eres digno de recibirlo superando un desafío.")
 print("El desafío consiste en escribir sobre un tema que te apasione lo más rápido y sin errores posible. Sé que eres muy bueno en esto, así que no te lo pondré fácil.")
-print("Debes alcanzar una velocidad mínima de 40 wpm y cometer como máximo 3 errores para lograr tu objetivo.")
+print("Debes alcanzar una velocidad mínima de 50 wpm y cometer como máximo 3 errores para lograr tu objetivo.")
 print()
 # Establecer un umbral mínimo de velocidad y máximo de errores para superar el desafío
-velocidad_minima = 45 # wpm
+velocidad_minima = 50 # wpm
 errores_maximos = 3
 
 # Crear una variable para controlar si el usuario ha superado el desafío o no
@@ -37,9 +39,10 @@ while not superado:
 
     print(f"El texto a escribir es:")
     print("-----------------------------------------------------------------")
-    print(texto)
+    print(colored(texto, "green", attrs=["bold"]))
     print("-----------------------------------------------------------------")
     print()
+    print("Debes escribirlo tal cual aparece y finalizas aprentando ENTER.")
     print("¿Estás listo? Presiona ENTER para comenzar (o CTRL+C para salir).")
     input()
 
@@ -75,6 +78,7 @@ while not superado:
    
     if wpm >= velocidad_minima and errores <= errores_maximos:
        print("¡Bravo! Has superado el desafío con éxito. Sabía que podías hacerlo. Tu regalo es una suscripción de 1 mes en brilliant.com, la mejor plataforma para aprender ciencia y matemáticas. Sé que te encantará.")
+       print("Sale su manquehuito?")
        superado = True # Cambiar la variable a True para salir del bucle while
    
     else:
