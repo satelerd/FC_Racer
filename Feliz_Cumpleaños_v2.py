@@ -5,9 +5,9 @@ from termcolor import colored
 
 # Mensaje de bienvenida´
 print()
-print("Hola Bitran. Te he enviado este archivo especial porque hoy es tu cumpleaños y quiero desearte lo mejor")
+print(colored("Hola Bitran. Te he enviado este archivo especial porque hoy es tu cumpleaños y te tengo un regalo", "yellow", attrs=["bold"]))
 print("Pero no creas que te voy a regalar algo tan fácilmente. Tendrás que demostrar que eres digno de recibirlo superando un desafío.")
-print("El desafío consiste en escribir sobre un tema que te apasione lo más rápido y sin errores posible. Sé que eres muy bueno en esto, así que no te lo pondré fácil.")
+print("El desafío consiste en escribir sobre un tema que te apasione lo más rápido y menor cantidad de errores posible.")
 print("Debes alcanzar una velocidad mínima de 50 wpm y cometer como máximo 3 errores para lograr tu objetivo.")
 print()
 
@@ -29,10 +29,10 @@ while not superado:
     # Crear el texto a escribir con palabras aleatorias de la lista
     lista = ["bitri", "blitzcrank", "super red del bitran", "bitri el tocino", "du hast", "ecuestre", "aviso!", "la rueda nunca deja de girar", "chachis gaming chile"]
     random.shuffle(lista)
-    print(lista)
     texto = ""
     for i in lista:
         texto += i + " "
+    texto += "."
 
     print(f"El texto a escribir es:")
     print("-----------------------------------------------------------------")
@@ -74,9 +74,11 @@ while not superado:
     # Comprobar si el usuario ha superado el desafío o no
    
     if wpm >= velocidad_minima and errores <= errores_maximos:
-       print("¡Bravo! Has superado el desafío con éxito. Sabía que podías hacerlo. Tu regalo es una suscripción de 1 mes en brilliant.com, la mejor plataforma para aprender ciencia y matemáticas. Sé que te encantará.")
-       print("Sale su manquehuito?")
-       superado = True # Cambiar la variable a True para salir del bucle while
+        print(colored("¡GRAAANNDEEEEE WNNN! Has superado el desafío con éxito.", "green", attrs=["bold"]))
+        print("Tu regalo es una suscripcion por 3 meses a brilliant.com!")
+        print("Avisame que completaste este desafío para enviarte el código de la suscripción.")
+        print("Sale su manquehuito?")
+        superado = True # Cambiar la variable a True para salir del bucle while
    
     else:
-       print("Vaya, no has superado el desafío. No pasa nada, sé que lo puedes conseguir. Inténtalo de nuevo tantas veces como quieras.") 
+        print("Vaya, no has superado el desafío. No pasa nada, sé que lo puedes conseguir. Inténtalo de nuevo tantas veces como quieras.") 
