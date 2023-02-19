@@ -1,4 +1,8 @@
-# Feliz_Cumpleaños.py
+"""
+Feliz_Cumpleaños.py
+Creado en colaboracion entre Sat + BingAI.
+"""
+
 import time
 import random
 
