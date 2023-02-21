@@ -1,3 +1,4 @@
+# coding=utf-8
 """
 Feliz_Cumpleaños.py
 Creado en colaboracion entre Sat + BingAI.
